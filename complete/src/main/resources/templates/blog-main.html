@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Posts</title>
+    </head>
+    <body>
+        <a href="/blog/add">Добавить статью</a>
+        <a href="/blog/delete">Удалить статью</a>
+        <h1>Статьи</h1>    
+        <div th:each = "el:${posts}">
+            <h3 th:text = "${el.text}"></h3>
+        </div>
+
+    </body>
+</html>
